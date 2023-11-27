@@ -52,12 +52,9 @@ The current time and color coding are automatically updated every minute.
 ![image](https://github.com/RlucSal/Daily-Planner-App/assets/145674108/03c40aac-186f-4142-af3f-3e65985023c6)
 ![image](https://github.com/RlucSal/Daily-Planner-App/assets/145674108/0e425d43-cda9-4393-b535-24e2523750fd)
 
-
-
-
-
 ### Link to deployed application
 
+https://rlucsal.github.io/Daily-Planner-App/
 
 ## Credits
 
