@@ -51,7 +51,7 @@ header {
   padding: 0.55rem 0.90rem;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.5;
   color: black;
   background-color : whitesmoke;
 }
@@ -61,18 +61,18 @@ header {
   box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.30); 
 }
 
-.past {
-  background-color: #d3d3d3;
+.past .form-control {
+  background-color: rgb(247, 210, 224);
   color: white;
 }
 
-.present {
-  background-color: #ff6961;
+.present .form-control {
+  background-color:  rgb(168, 71, 219);
   color: white;
 }
 
-.future {
-  background-color: #77dd77;
+.future .form-control{
+  background-color:  rgb(111, 47, 145);
   color: white;
 }
 .btn-primary {
@@ -83,7 +83,6 @@ header {
   --bs-btn-hover-bg: black;
   --bs-btn-hover-border-color: black;
 }
-
 .saveBtn {
   margin-top: 4px;
   background-color: gray;
@@ -96,4 +95,30 @@ header {
 .saveBtn :hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
+}
+.deleteBtn {
+  margin-top: 4px;
+  background-color: gray;
+  color:whitesmoke;
+  border-color: whitesmoke;
+  border-width: 2.5px;
+  border-radius: 12px;
+}
+.deleteBtn :hover {
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+}
+@media screen and (max-width: 768px) {
+  
+  header {
+    padding: 30px;
+  }
+
+  .row {
+    height: auto;
+  }
+
+  .hour {
+    margin-top: 10px;
+  }
 }
