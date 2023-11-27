@@ -2,6 +2,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
+  background-color: gray;
 }
 
 textarea {
@@ -28,19 +29,36 @@ header {
 
 .time-block {
   text-align: center;
-  border-radius: 15px;
+  background-color: gray;
 }
 
 .row {
   white-space: pre-wrap;
   height: 80px;
-  border-top: 1px solid white;
+ 
 }
 
 .hour {
-  background-color: #ffffff;
-  color: #000000;
-  border-top: 1px dashed #000000;
+  
+  color:whitesmoke;
+  background-color: gray;
+  margin-top: 45px;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.55rem 0.90rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: black;
+  background-color : whitesmoke;
+}
+
+.form-control:focus {
+  border-color: black;
+  box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.30); 
 }
 
 .past {
@@ -57,16 +75,25 @@ header {
   background-color: #77dd77;
   color: white;
 }
-
-.saveBtn {
-  border-left: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background-color: #06aed5;
-  color: white;
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: black;
+  --bs-btn-border-color:black;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: black;
+  --bs-btn-hover-border-color: black;
 }
 
-.saveBtn i:hover {
+.saveBtn {
+  margin-top: 4px;
+  background-color: gray;
+  color:whitesmoke;
+  border-color: whitesmoke;
+  border-width: 2.5px;
+  border-radius: 12px;
+}
+
+.saveBtn :hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
