@@ -1,3 +1,4 @@
+// This function is called when the DOM is ready to be manipulated. It ensures that your code will not run until the DOM is fully loaded.
 $(document).ready(function () {
     // Function to create the date and time for the header
     function displayDate() {
@@ -8,18 +9,19 @@ $(document).ready(function () {
     // Save Button Click Event
     $(".container").on("click", ".saveBtn", function () {
         var input = $(this).closest('.row').find('.form-control').val();
-        var whichHour = $(this).closest('.row').find('.form-control').attr('id');
-        localStorage.setItem(whichHour, input);
+        var whichHourS = $(this).closest('.row').find('.form-control').attr('id');
+        localStorage.setItem(whichHourS, input);
     });
 
+     // Delete Button Click Event
     $(".container").on("click", ".deleteBtn", function () {
-        var hourId = $(this).closest('.row').find('.form-control').attr('id');
+        var whichHourId = $(this).closest('.row').find('.form-control').attr('id');
         
         // Clear the value of the input field
         $(this).closest('.row').find('.form-control').val('');
         
         // Remove the item from localStorage
-        localStorage.removeItem(hourId);
+        localStorage.removeItem(whichHourId);
     });
 
     // Color Coding Time Blocks
@@ -30,7 +32,6 @@ $(document).ready(function () {
             $(this).toggleClass("past", calendarHour < currentHour);
             $(this).toggleClass("present", calendarHour === currentHour);
             $(this).toggleClass("future", calendarHour > currentHour);
-            $(this).children('.form-control').prop( calendarHour < currentHour);
         });
     };
 
@@ -43,19 +44,5 @@ $(document).ready(function () {
     // Update colors and current time every minute
     setInterval(updateColors, 60000);
     updateColors();
-
-    // Add and Delete Items
-    $(".container").on("click", ".addBtn", function () {
-        var newInput = $("<input>").addClass("form-control");
-        var newBtn = $("<button>").addClass("btn btn-primary saveBtn").text("Save");
-
-        var newRow = $("<div>").addClass("row");
-        var newHourCol = $("<div>").addClass("col-md-1 hour").text("New Item");
-        var newTimeBlockCol = $("<div>").addClass("col-md-10 time-block").append(newInput);
-        var newSaveBtnCol = $("<div>").addClass("col-md-1").append(newBtn);
-
-        newRow.append(newHourCol, newTimeBlockCol, newSaveBtnCol);
-        $(".container").append(newRow);
-    });
 
 });
