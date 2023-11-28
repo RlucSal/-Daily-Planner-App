@@ -2,7 +2,7 @@
 $(document).ready(function () {
     // Function to create the date and time for the header
     function displayDate() {
-        $("#currentDay").html(dayjs().format("DD MMMM YYYY h:mm:ss a"));
+        $("#currentDay").html(dayjs().format("DD MMMM YYYY h:mm:ss"));
     }
     setInterval(displayDate, 1000);
 
